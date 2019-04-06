@@ -1,0 +1,30 @@
+.font-base,
+.font-family-base {
+    font-family: 'Sailec', 'Helvetica', 'Arial', sans-serif
+}
+.line-height-tight {
+    line-height: 1.525em
+}
+.font-weight-light,
+.light {
+    font-weight: 300
+}
+.text-shortest {
+    font-size: 12px
+}
+@media screen and (min-width:768px) {
+    .text-short-from-xs {
+        font-size: 18px
+    }
+
+}
+@media screen and (min-width:1600px) {
+    .text-current-from-xl {
+        font-size: 21px
+    }
+}
+
+.margin-vertical-larger {
+    margin-top: 12rem;
+    margin-bottom: 12rem
+}

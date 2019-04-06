@@ -1,0 +1,339 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="John Doe">
+  <meta name="description" content="">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>CardioIntel</title>
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png')}}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png')}}" />
+  <!-- Plugin-CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+  <!-- Main-Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+  <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+  <script>
+  function setup() {
+              document.getElementById('buttonid').addEventListener('click', openDialog);
+              function openDialog() {
+                  document.getElementById('fileid').click();
+              }
+              document.getElementById('fileid').addEventListener('change', submitForm);
+              function submitForm() {
+                  document.getElementById('formid').submit();
+              }
+          }
+  </script>
+
+  <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#primary-menu">
+
+  <div class="preloader">
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+  </div>
+  <!--Mainmenu-area-->
+  <div class="mainmenu-area" data-spy="affix" data-offset-top="100" style="width:100%; height:75px; background-color:#ff7777">
+    <div class="container">
+      <!--Logo-->
+      <div class="navbar-header" style="visibility:visible; color:#ff7777;">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand logo">
+<!-- -->          <img class="headerimage" src="static/images/logo.png" style="margin-top:-20px;margin-left:-120px;width:500px; height:auto;" />        </a>
+      </div>
+      <!--Logo/-->
+      <nav class="collapse navbar-collapse" id="primary-menu">
+        <ul class="nav navbar-nav navbar-right" style="color:#ff7777; visibility:visible;">
+          <li class="active"><a href="#home-page">Home</a></li>
+          <!--<li><a href="#sponsor-page">Sponsors</a></li>-->
+          <li><a href="#workshops-page">Workshops</a></li>
+          <li><a href="#schedule-page">Schedule</a></li>
+          <li><a href="#faq-page">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!--Mainmenu-area/-->
+
+  <!--Header-area-->
+  <header class="header-area overlay full-height relative v-center" id="home-page">
+    <div class="absolute anlge-bg"></div>
+    <div class="container">
+      <div class="row v-center">
+        <div class="col-xs-12 col-md-7 header-text">
+          <h2>CardioIntel</h2>
+          <p class="openingstatement">
+            <!--AcademiesHacks is an opportunity for YOU, regardless of your coding skill, to learn about any aspect of computer science,
+            software or hardware, and create a finished product. We believe in a fun and inclusive environment and will do our best to support you while making sure everyone has a great time!-->
+            Know your heart.
+          </p>
+          <input id='fileid' type='file' hidden/>
+          <input id ='buttonid' type= 'button' class="button white" value='Upload .wav file'/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="gray-bg section-padding" id="workshops-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+          <div class="page-title">
+            <h2>Heartbeat Classification.</h2>
+            <p>
+              Learn more about the class your heartbeat classifies as.
+            </p>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="box">
+            <div class="box-icon">
+              <img src="{{ url_for('static', filename='images/chip.png')}}" alt="">
+            </div>
+            <h3>Normal</h3>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="box">
+            <div class="box-icon">
+              <img src="{{ url_for('static', filename='images/monitor.png')}}" alt="">
+            </div>
+            <h3>Artifact</h3>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="box">
+            <div class="box-icon">
+              <img src="{{ url_for('static', filename='images/virtual-reality.png')}}" alt="">
+            </div>
+            <h3>Murmur</h3>
+            <br>
+
+            <br>
+
+            <br>
+             </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="box">
+            <div class="box-icon">
+              <img src="{{ url_for('static', filename='images/molecular.png')}}" alt="">
+            </div>
+            <h3>Extrasystole</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="gray-bg section-padding" id="faq-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+          <div class="page-title">
+            <h2>Frequently Asked Questions</h2>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="panel-group" id="accordion">
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" style="visibility:visible">What is AcademiesHacks?</a>
+              </h4>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <p>A hackathon at the Academies of Loudoun that educates students from age middle school to advanced high school various topics about computer science</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="visibility:visible">When is AcademiesHacks?</a>
+              </h4>
+              <div id="collapse2" class="panel-collapse collapse">
+                <p>May 18th from 9AM to 9PM.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="visibility:visible">Who can attend?</a>
+              </h4>
+              <div id="collapse3" class="panel-collapse collapse">
+                <p>Students aged from middle school to advanced high school.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="visibility:visible">Is there any cost?</a>
+              </h4>
+              <div id="collapse4" class="panel-collapse collapse">
+                <p>No, this event is fully funded thanks to our generous sponsors.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="visibility:visible">Is there a deadline to register?</a>
+              </h4>
+              <div id="collapse5" class="panel-collapse collapse">
+                <p>Yes, the deadline to register is May 1st.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="visibility:visible">Is there a code of conduct?</a>
+              </h4>
+              <div id="collapse6" class="panel-collapse collapse">
+                <p>Yes, please refer to <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">this document.</a></p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="visibility:visible">Do I need a team?</a>
+              </h4>
+              <div id="collapse8" class="panel-collapse collapse">
+                <p>You can either register with a team, you can come individually, or we can assign you one.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="visibility:visible">What if I don't know how to code?</a>
+              </h4>
+              <div id="collapse9" class="panel-collapse collapse">
+                <p>No worries! Our workshops are geared toward your skill.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="visibility:visible">What should I bring?</a>
+              </h4>
+              <div id="collapse10" class="panel-collapse collapse">
+                <p>All you need to bring is yourself, a computer, and a charger.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-padding overlay client-area overlay" id="client-page">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-xs-12">
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer class="font-base line-height-tight font-weight-light text-shortest text-short-from-xs text-current-from-xl margin-vertical-larger js-fix-scroll-pad">
+    <div class="max-width-xl padding-horizontal-broad padding-horizontal-broader-from-xs padding-horizontal-broadest-from-sm margin-horizontal-auto">
+      <div class="flexbox flex-wrap margin-left-minus-broad margin-top-minus-broadest">
+        <div class="padding-left-broad border-box flex-grow-1 max-width-small padding-top-broadest">
+          <p><a href="https://www.google.ca/maps/place/460+Rue+Sainte-Catherine+O+%23801,+Montr%C3%A9al,+QC+H3B/@45.5050883,-73.5686516,18z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a459b9d425d:0x1b4e9032bfb88e70!8m2!3d45.5050883!4d-73.5680009">
+              42075 Loudoun Academy Dr<br>
+              Leesburg, VA<br>
+              United States</a>
+          </p>
+
+        </div>
+        <div class="flex-grow-1 padding-top-broadest padding-left-broad">
+          <div class="markdown flex-grow-1 max-width-small">
+            <p><a href="tel:+1-571-252-0000">(571) 252-0000</a>
+              <br>
+              <a href="mailto:hello@tux.co">academieshacks@gmail.com</a></p>
+          </div>
+
+
+          <h6 class="font-base line-height-tightest font-weight-medium text-shorter text-current-from-lg margin-top-broadest margin-top-thin-from-xs margin-bottom-thinnest">Follow us</h6>
+
+
+          <div class="flexbox flex-wrap margin-top-minus-thinner margin-left-minus-thinner">
+
+            <div class="square-broadest square-broader-from-xs square-broad-from-sm padding-micro relative margin-top-thinner margin-left-thinner">
+              <a data-ga-label="facebook" data-ga-action="clic" data-ga-cat="social" class="border-solid border-slimmer border-color-black border-radius-full width-full height-full bg-color-black-on-hover color-white-on-hover transition-color-bg-color transition-duration-fastest transition-ease-out-quad line-height-perfect absolute fill"
+                href="https://www.facebook.com/academies.hackathon">
+                <div class="absolute fill flexbox flex-center"><span class="relative">FB</span></div>
+              </a>
+            </div>
+            <div class="square-broadest square-broader-from-xs square-broad-from-sm padding-micro relative margin-top-thinner margin-left-thinner">
+              <a data-ga-label="twitter" data-ga-action="clic" data-ga-cat="social" class="border-solid border-slimmer border-color-black border-radius-full width-full height-full bg-color-black-on-hover color-white-on-hover transition-color-bg-color transition-duration-fastest transition-ease-out-quad line-height-perfect absolute fill"
+                href="https://twitter.com/academieshacks">
+                <div class="absolute fill flexbox flex-center"><span class="relative">TW</span></div>
+              </a>
+            </div>
+            <div class="square-broadest square-broader-from-xs square-broad-from-sm padding-micro relative margin-top-thinner margin-left-thinner">
+              <a data-ga-label="linkedin" data-ga-action="clic" data-ga-cat="social" class="border-solid border-slimmer border-color-black border-radius-full width-full height-full bg-color-black-on-hover color-white-on-hover transition-color-bg-color transition-duration-fastest transition-ease-out-quad line-height-perfect absolute fill"
+                href="https://www.instagram.com/academies.hackathon">
+                <div class="absolute fill flexbox flex-center"><span class="relative">INS</span></div>
+              </a>
+            </div>
+            <!-- <div class="square-broadest square-broader-from-xs square-broad-from-sm padding-micro relative margin-top-thinner margin-left-thinner">
+              <a data-ga-label="linkedin" data-ga-action="clic" data-ga-cat="social" class="border-solid border-slimmer border-color-black border-radius-full width-full height-full bg-color-black-on-hover color-white-on-hover transition-color-bg-color transition-duration-fastest transition-ease-out-quad line-height-perfect absolute fill"
+                href="https://www.linkedin.com/in/haneef-khan-778676139/">
+                <div class="absolute fill flexbox flex-center"><span class="relative">LKD</span></div>
+              </a>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+      <div class="flexbox flex-wrap flex-justify-space-between margin-top-broader">
+        <div class="color-light-grey">Academies of Loudoun 2019</div>
+        <iframe class="copy-288" src="https://watermark.deuxhuithuit.com/v2/?lang=en&amp;bg=transparent&amp;text=a5a5a5&amp;logo-color=a5a5a5&amp;font=Arial,%20Helvetica,%20sans-serif&amp;font-size=12&amp;w=150&amp;h=28&amp;ref=tux&amp;word=Code%20and%20design%20credits&amp;transform=none&amp;display=inline&amp;t-align=right&amp;l-height=0&amp;logo-align=right&amp;logo-always-animated=false&amp;no-logo=false"
+          margin="0" border="0" scrolling="no" frameborder="no" width="150" height="28"></iframe>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!--Vendor-JS-->
+  <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js')}}"></script>
+
+   <!--Plugin-JS-->
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/contact-form.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.parallax-1.1.3.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/scrollUp.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/wow.min.js')}}"></script>
+  <!--Main-active-JS-->
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+{% block content %}
+{% endblock %}
+</body>
+
+</html>
