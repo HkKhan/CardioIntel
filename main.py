@@ -1,8 +1,9 @@
 
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
-from keras.models import load_model
-from keras.models import model_from_json
+import keras
+import tensorflow as tf
+import keras.layers
 import numpy as np
 import os
 
@@ -14,16 +15,6 @@ ALLOWED_EXTENSIONS = set(['wav'])
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
-
-def buildModel():
-    # load json and create model
-    json_file = open('model.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    model = model_from_json(loaded_model_json)
-    # load weights into new model
-    model.load_weights("model.h5")
-    return model
 
 #0 is Artifact
 #1 is Extrasystole
@@ -41,7 +32,7 @@ def upload_file():
       f = request.files['file']
       if f and allowed_file(f.filename):
           f.save(os.path.join(app.config['UPLOAD_FOLDER'],secure_filename(f.filename)))
-          #model = buildModel()
+          model = keras.models.load_model('finalModel.h5')
           #prediction = model.predict("/uploads/*.wav")
           #print(prediction)
           stringPrediction = "Normal"
