@@ -8,13 +8,13 @@
     <br>
     <br>
     <br>
-    Your heart beat classifies as: {{ value }}
+    Your heart beat is classified as: {{ value }}
     <br>
     <br>
     <br>
     <br>
     Here were the chances:
-    <p>
+    <p style="font-size: 20px;">
       Normal: {{normalChance}}%
       <br>
       Artifact: {{artifactChance}}%
@@ -30,7 +30,7 @@
     <br>
 </body>
 <h2>
-    <button  onclick="window.location.href = 'http://localhost:5000/';" style="background-color: #ff7777; font-family: 'Josefin Sans'; border: none; color: white; padding: 15px 25px; text-align: center; font-size: 16px; cursor: pointer;"type="button">Return to home</button>
-</h2>
+<input type="button" style="background-color: #ff7777; font-family: 'Josefin Sans'; border: none; color: white; padding: 15px 25px; text-align: center; font-size: 16px; cursor: pointer;"type="button" value = "Return to home" onclick="history.go(-1)">
+    </h2>
 
 </html>

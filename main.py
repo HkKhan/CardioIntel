@@ -9,7 +9,6 @@ import numpy as np
 import os
 from os import listdir
 from os.path import isfile, join
-
 import scipy.io.wavfile
 
 
@@ -17,6 +16,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ALLOWED_EXTENSIONS = set(['wav'])
+
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -42,24 +42,25 @@ def extractSin():
     data = keras.preprocessing.keras_preprocessing.sequence.pad_sequences(data, maxlen=396900, dtype = np.float64, padding = 'post', value = 0)
     data = np.sin(data)
     data = data.reshape(1,396900,1)
+    os.remove(filename)
     return data
+
 def makeStringPrediction(prediction):
-    max = np.argmax(prediction)
     stringPrediction = ""
-    if max==0:
-        stringPrediction = "Artifact"
-    if max==1:
-        stringPrediction = "Extrasystole"
-    if max==2:
-        stringPrediction = "Murmur"
-    if max==3:
-        stringPrediction = "Normal"
-    return stringPrediction
+    if prediction[0][3] > .45:
+        return "Normal"
+    if prediction[0][2] > .2:
+        return "Murmur"
+    if prediction[0][0] > .05:
+        return "Artifact"
+    if prediction[0][1] > .1:
+        return "Extrasystole"
+
 #0 is Artifact
 #1 is Extrasystole
 #2 is Murmur
 #3 is Normal
-
+###############################################################################
 @app.route('/')
 def home():
     return render_template('index0.html')
@@ -73,6 +74,7 @@ def upload_file():
           model = buildModel()
           prediction = model.predict(extractSin())
           stringPrediction = makeStringPrediction(prediction)
+          del model
           return render_template('output.html', value=stringPrediction, artifactChance=round(100*prediction[0][0], 2), extraChance=round(100*prediction[0][1],2), murmurChance=round(100*prediction[0][2], 2), normalChance=round(100*prediction[0][3], 2))
       else:
           return render_template('wrongfile.html')
