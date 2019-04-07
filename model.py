@@ -15,7 +15,7 @@ import random
 import numba
 
 
-'''
+
 base_dir = os.path.join('C:\\', 'Users', 'Haneef Khan', 'Downloads', 'heartbeat-sounds')
 
 csv_file = os.path.join(base_dir, 'set_a.csv')
@@ -59,7 +59,7 @@ for file in set_a[0]:
     set_a_values = np.vstack((set_a_values, data))
     del data
     print('set_a', set_a_values.shape)
-    
+
 for file in set_b[0]:
     filename = os.path.join(path_b,file)
     fs, data = scipy.io.wavfile.read(filename)
@@ -68,7 +68,7 @@ for file in set_b[0]:
     set_b_values = np.vstack((set_b_values, data))
     del data
     print('set_b', set_b_values.shape)
-    
+
 set_a_values = np.sin(set_a_values)
 set_b_values = np.sin(set_b_values)
 
@@ -106,7 +106,7 @@ all_data = all_data.reshape(584,396904,1)
 
 train_data= all_data[0:467,0:396900]
 train_labels=all_data[0:467, 396900:396904,0]
-test_data = all_data[467:584,0:396900] 
+test_data = all_data[467:584,0:396900]
 test_labels = all_data[467:584,396900:396904,0]
 
 
@@ -146,7 +146,7 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 plt.show()
-'''
+
 model_json = cnn.to_json()
 with open("model.json", "w", ) as json_file:
     json_file.write(model_json)
