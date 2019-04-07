@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="CardioIntel">
     <meta name="description" content="">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -75,16 +75,13 @@
         <img style="margin-left:-20px;margin-top:1px;" src="https://steamuserimages-a.akamaihd.net/ugc/925921546925723480/7C735DA09642CC70E65CFD042550B81F3F76FFB3/" alt="heartbeatTracking">
 
 
-
-
-
         </form>
         <html>
 
         <body>
             <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
-                <input type="file" name="file" />
-                <input type="submit" />
+                <input style="margin-left: 200%; margin-bottom: 10%;"type="file" name="file"/>
+                <input style="font-weight:bold; margin-left: 210%; margin-bottom: 40%; background-color: #000000; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;"type="submit" id = "Upload" value="Upload."/>
             </form>
         </body>
 
@@ -115,7 +112,7 @@
 
     </header>
 
-    <section class="gray-bg section-padding" id="workshops-page">
+    <section class="gray-bg section-padding" id="workshops-page" style="background-image: url('https://d1aueex22ha5si.cloudfront.net/Conference/46/BackGround/s-27aeb2b874ddb715cbdf289069ed980238da2c60-1535964992913.gif(height=auto)')">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
@@ -133,7 +130,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="box">
                         <div class="box-icon">
-                            <img src="{{ url_for('static', filename='images/chip.png')}}" alt="">
+                            <img src="https://image.flaticon.com/icons/svg/263/263417.svg" width="150px" height="150px" alt="">
                         </div>
                         <br>
                         <h3>Normal</h3>
@@ -145,7 +142,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="box">
                         <div class="box-icon">
-                            <img src="{{ url_for('static', filename='images/monitor.png')}}" alt="">
+                            <img src="https://image.flaticon.com/icons/svg/1583/1583611.svg" width="150px" height="150px" alt="">
                         </div>
                         <br>
                         <h3>Artifact</h3>
@@ -157,7 +154,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="box">
                         <div class="box-icon">
-                            <img src="{{ url_for('static', filename='images/virtual-reality.png')}}" alt="">
+                            <img src="https://image.flaticon.com/icons/svg/1635/1635473.svg" width="150px" height="150px" alt="">
                         </div>
                         <br>
                         <h3>Murmur</h3>
@@ -169,7 +166,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="box">
                         <div class="box-icon">
-                            <img src="{{ url_for('static', filename='images/molecular.png')}}" alt="">
+                            <img src="https://image.flaticon.com/icons/svg/1546/1546124.svg" width="150px" height="150px" alt="">
                         </div>
                         <br>
                         <h3>Extrasystole</h3>
@@ -184,17 +181,20 @@
 
 
 
-    <section class="gray-bg section-padding" id="faq-page">
+    <section class="black-bg section-padding" id="faq-page" style="background-image:url('https://ak2.picdn.net/shutterstock/videos/29750992/thumb/1.jpg?i10c=img.resize')">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
                     <div class="page-title">
                         <h2>Company Profile</h2>
-                        <p style="text-align: left;">
-                          EMTs face situations in which they are unable to render aid in certain cardiac emergencies. This project aims to leverage a CNN-LSTM model for classification of heartbeats in these situations.
-                            Cardiointel leverages the power of Artificial Intelligence and Machine Learning to help
-                            EMTs in the diagnosis of cardiac conditions in emergencies
-                            in order to
+                        <p style="text-align: left; margin-left:20px">
+                          Bioinformatics has become a major research area in our current
+                          technological society.
+                          EMTs face situations in which they are unable to render aid in certain cardiac emergencies.
+                            CardioIntel leverages the power of Artificial Intelligence and Machine Learning to help
+                            EMTs in the diagnosis of cardiac conditions in emergencies.
+
+
                         </p>
                     </div>
                 </div>
@@ -212,33 +212,7 @@
     </section>
 
     <footer class="font-base line-height-tight font-weight-light text-shortest text-short-from-xs text-current-from-xl margin-vertical-larger js-fix-scroll-pad">
-        <div class="max-width-xl padding-horizontal-broad padding-horizontal-broader-from-xs padding-horizontal-broadest-from-sm margin-horizontal-auto">
-            <div class="flexbox flex-wrap margin-left-minus-broad margin-top-minus-broadest">
-                <div class="padding-left-broad border-box flex-grow-1 max-width-small padding-top-broadest">
-                    <p><a href="https://www.google.ca/maps/place/460+Rue+Sainte-Catherine+O+%23801,+Montr%C3%A9al,+QC+H3B/@45.5050883,-73.5686516,18z/data=!3m1!4b1!4m5!3m4!1s0x4cc91a459b9d425d:0x1b4e9032bfb88e70!8m2!3d45.5050883!4d-73.5680009">
-                            42075 Loudoun Academy Dr<br>
-                            Leesburg, VA<br>
-                            United States</a>
-                    </p>
 
-                </div>
-                <div class="flex-grow-1 padding-top-broadest padding-left-broad">
-                    <div class="markdown flex-grow-1 max-width-small">
-                        <p><a href="tel:+1-571-252-0000">(571) 252-0000</a>
-                            <br>
-                            <a href="mailto:hello@tux.co">academieshacks@gmail.com</a></p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="flexbox flex-wrap flex-justify-space-between margin-top-broader">
-            <div class="color-light-grey">Sid Rapolu and Friends 2019</div>
-            <iframe class="copy-288"
-                src="https://watermark.deuxhuithuit.com/v2/?lang=en&amp;bg=transparent&amp;text=a5a5a5&amp;logo-color=a5a5a5&amp;font=Arial,%20Helvetica,%20sans-serif&amp;font-size=12&amp;w=150&amp;h=28&amp;ref=tux&amp;word=Code%20and%20design%20credits&amp;transform=none&amp;display=inline&amp;t-align=right&amp;l-height=0&amp;logo-align=right&amp;logo-always-animated=false&amp;no-logo=false"
-                margin="0" border="0" scrolling="no" frameborder="no" width="150" height="28"></iframe>
-        </div>
-        </div>
     </footer>
 
 
